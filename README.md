@@ -1,4 +1,6 @@
 # Esp32-CAM-MB
+Vc pode adquirir no Mercado Livre, o link é apenas um exemplo
+https://www.mercadolivre.com.br/kit-c03-modulos-esp32-cam-mb-cmera-ov2640-e-antena-nota/p/MLB2069944466?pdp_filters=item_id:MLB3277415831
 
 Adicione essa URL nas Additionals URls do Arduino IDE
 https://espressif.github.io/arduino-esp32/package_esp32_index.json
