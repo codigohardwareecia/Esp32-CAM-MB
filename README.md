@@ -167,3 +167,28 @@ void loop() {
   }
 }
 ```
+
+Para acender a lanterna
+
+```
+#define FLASH_GPIO_NUM 4
+
+pinMode(FLASH_GPIO_NUM, OUTPUT);
+digitalWrite(FLASH_GPIO_NUM, HIGH); // HIGH liga a lanterna, LOW desliga.
+```
+
+Aumentar a qualidadeda imagem
+
+```
+if(psramFound()){
+    Serial.println("PSRAM encontrada! Ativando resolução máxima.");
+    config.frame_size = FRAMESIZE_UXGA; // <--- Máxima resolução: 1600x1200
+    config.jpeg_quality = 10;           // Qualidade boa (escala de 0 a 63)
+    config.fb_count = 1;                // 1 buffer é mais seguro para UXGA
+  } else {
+    Serial.println("PSRAM NÃO encontrada! Usando resolução baixa de segurança.");
+    config.frame_size = FRAMESIZE_SVGA; // 800x600 (máximo seguro sem PSRAM)
+    config.jpeg_quality = 12;
+    config.fb_count = 1;
+  }
+```
